@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DayNest</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><h1>🪺 DayNest</h1>
+<nav><button data-tab="dash" class="active">Dashboard</button><button data-tab="tasks">Tasks</button>
+<button data-tab="notes">Notes</button><button data-tab="journal">Journal</button></nav></header>
+<main>
+<section id="dash">
+  <div class="cards">
+    <div class="card"><h3>Progress</h3><p id="progress">0%</p></div>
+    <div class="card"><h3>Overdue</h3><p id="overdue">0</p></div>
+    <div class="card"><h3>Total tasks</h3><p id="total">0</p></div>
+  </div>
+  <h3>Today's tasks</h3><ul id="todayList"></ul>
+  <h3>Upcoming (7 days)</h3><ul id="upcomingList"></ul>
+  <h3>Recent notes</h3><ul id="recentNotes"></ul>
+</section>
+<section id="tasks" hidden>
+  <form id="taskForm" class="row">
+    <input id="tTitle" placeholder="Task title" required>
+    <select id="tPriority"><option>LOW</option><option selected>MEDIUM</option><option>HIGH</option></select>
+    <select id="tStatus"><option>PENDING</option><option>IN_PROGRESS</option><option>COMPLETED</option></select>
+    <select id="tCategory"><option value="">No category</option><option>study</option><option>personal</option><option>work</option></select>
+    <input id="tDue" type="date"><input id="tRemind" type="datetime-local"><button>Add</button>
+  </form>
+  <div class="row filters">
+    <select id="fStatus"><option value="">Any status</option><option>PENDING</option><option>IN_PROGRESS</option><option>COMPLETED</option></select>
+    <select id="fPriority"><option value="">Any priority</option><option>LOW</option><option>MEDIUM</option><option>HIGH</option></select>
+    <select id="fCategory"><option value="">Any category</option><option>study</option><option>personal</option><option>work</option></select>
+    <input id="fDue" type="date"><button id="applyFilter">Filter</button>
+  </div>
+  <ul id="taskList"></ul>
+</section>
+<section id="notes" hidden>
+  <input id="nSearch" placeholder="Search notes...">
+  <form id="noteForm"><input id="nTitle" placeholder="Title" required><textarea id="nContent" placeholder="Write something..."></textarea><button>Save note</button></form>
+  <ul id="noteList"></ul>
+</section>
+<section id="journal" hidden>
+  <div class="row"><input id="jDate" type="date"><select id="jMood"><option value="">Mood (optional)</option><option>😊 Happy</option><option>😐 Okay</option><option>😔 Sad</option><option>😤 Stressed</option></select></div>
+  <textarea id="jContent" placeholder="How was your day?"></textarea>
+  <button id="jSave">Save entry</button> <button id="jDelete">Delete entry</button>
+</section>
+</main>
+<script src="app.js"></script></body></html>
