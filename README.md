@@ -1,4 +1,5 @@
 # DayNest
+ HEAD
 
 DayNest is a personal productivity and journaling web application that brings
 task management, reminders, custom lists, searchable notes and date-based
@@ -35,3 +36,6 @@ Java 17 · Spring Boot 3 · Spring Data JPA · MySQL · REST APIs · HTML/CSS/JS
 | GET/POST/PUT/DELETE | /api/notes (?q=search) | Notes + search |
 | GET/PUT/DELETE | /api/journal/{yyyy-mm-dd} | One journal entry per date (upsert) |
 | GET | /api/dashboard | Progress, today, upcoming, recent notes |
+=======
+Personal productivity and journaling platform built with Spring Boot, Spring Data JPA, MySQL and REST APIs.java spring-boot spring-data-jpa mysql rest-api full-stack productivity journaling
+ 955fafb9beca3170be20d7337266d8340b2ed6ac
